@@ -5,7 +5,7 @@ const postSchema = mongoose.Schema({
     content:{ type:String, required: true },
     userID:{ type:String },
     created_at :{ type: Date, default: Date.now },
-    updated_at :{ type: Date.now }
+    updated_at :{ type: Date }
 
 },
 {
@@ -14,6 +14,6 @@ const postSchema = mongoose.Schema({
 })
 
 
-const Post = mongoose.model("post", postSchema);
+const PostModel = mongoose.model("post", postSchema);
 
-module.exports = { Post };
+module.exports = { PostModel };
